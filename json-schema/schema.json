@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/baloola/project/refs/heads/main/json-schema/schema.json#",
+  "$id": "https://raw.githubusercontent.com/baloola/validate/refs/heads/main/json-schema/schema.json#",
   "title": "Project Extension",
   "description": "STAC project Extension for STAC Items.",
   "type": "object",
@@ -11,7 +11,7 @@
     "stac_extensions": {
       "type": "array",
       "contains": {
-        "const": "https://raw.githubusercontent.com/baloola/project/refs/heads/main/json-schema/schema.json"
+        "const": "https://raw.githubusercontent.com/baloola/validate/refs/heads/main/json-schema/schema.json"
       }
     }
   },
