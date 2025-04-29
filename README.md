@@ -11,7 +11,7 @@ This document explains the Template Extension to the [SpatioTemporal Asset Catal
 This is the place to add a short introduction.
 
 - Examples:
-  - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
+- [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
 
