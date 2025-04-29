@@ -1,7 +1,7 @@
 {
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/template/v1.0.0/schema.json"
+    "https://raw.githubusercontent.com/baloola/validate/refs/heads/main/json-schema/schema.json"
   ],
   "type": "Feature",
   "id": "item",
