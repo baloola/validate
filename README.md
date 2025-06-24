@@ -27,11 +27,9 @@ The fields in the table below can be used in these parts of STAC documents:
 - [ ] Links
 
 | Field Name                     | Type                      | Description                                  |
-| --------------------           | ------------------------- | -------------------------------------------- |
-| validate:quality_measures      | string                    | Describe applied quality measures on data (standardised calibration, repeated samples or measurements, data capture, data entry validation, peer review of data, or representation with controlled vocabularies) |
-| validate:workflow              | [Link Object](#link-object) | Describe the field...                        |
-| template:another_one           | \[number]                 | Describe the field...                        |
-
+| ------------------------------ | ------------------------- | -------------------------------------------- |
+| validate:quality_measures | string                    | Describe applied quality measures on data (standardised calibration, repeated samples or measurements, data capture, data entry validation, peer review of data, or representation with controlled vocabularies) |
+| validate:workflow | [Link Object](#link-object) | Link to validation reports or to validation script/process applied. The link relation must be `related`. |
 
 ### Link Object
 
@@ -43,7 +41,6 @@ This object describes a relationship with another entity.
 | rel        | string | **REQUIRED.** Relationship between the current document and the linked document. |
 | type       | string | Media type of the referenced entity. |
 | title      | string | A human readable title to be used in rendered displays of the link. |
-
 
 ## Contributing
 
