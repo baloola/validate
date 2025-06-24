@@ -1,16 +1,17 @@
 # Template Extension Specification
 
-- **Title:** Template
+- **Title:** Validate
 - **Identifier:** <https://raw.githubusercontent.com/baloola/validate/refs/heads/main/json-schema/schema.json>
-- **Field Name Prefix:** template
+- **Field Name Prefix:** -
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @your-gh-handles @person2
 
-This document explains the Template Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+This document explains the Validate Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 This is the place to add a short introduction.
 
 - Examples:
+- [Collection example](examples/collection.json): Shows the basic usage of the extension in a STAC Collection
 - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
@@ -19,42 +20,30 @@ This is the place to add a short introduction.
 
 The fields in the table below can be used in these parts of STAC documents:
 
-- [ ] Catalogs
+- [x] Catalogs
 - [x] Collections
 - [x] Item Properties (incl. Summaries in Collections)
-- [x] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
+- [] Assets (for both Collections and Items, incl. Item Asset Definitions in Collections)
 - [ ] Links
 
-| Field Name           | Type                      | Description                                  |
-| -------------------- | ------------------------- | -------------------------------------------- |
-| template:new_field   | string                    | **REQUIRED**. Describe the required field... |
-| template:xyz         | [XYZ Object](#xyz-object) | Describe the field...                        |
-| template:another_one | \[number]                 | Describe the field...                        |
+| Field Name                     | Type                      | Description                                  |
+| --------------------           | ------------------------- | -------------------------------------------- |
+| validate:quality_measures      | string                    | Describe applied quality measures on data (standardised calibration, repeated samples or measurements, data capture, data entry validation, peer review of data, or representation with controlled vocabularies) |
+| validate:workflow              | [Link Object](#link-object) | Describe the field...                        |
+| template:another_one           | \[number]                 | Describe the field...                        |
 
-### Additional Field Information
 
-#### template:new_field
+### Link Object
 
-This is a much more detailed description of the field `template:new_field`...
+This object describes a relationship with another entity.
 
-### XYZ Object
+| Field Name | Type   | Description |
+| ---------- | ------ | ----------- |
+| href       | string | **REQUIRED.** The actual link in the format of an URL. Relative and absolute links are both allowed. |
+| rel        | string | **REQUIRED.** Relationship between the current document and the linked document. |
+| type       | string | Media type of the referenced entity. |
+| title      | string | A human readable title to be used in rendered displays of the link. |
 
-This is the introduction for the purpose and the content of the XYZ Object...
-
-| Field Name | Type   | Description                                  |
-| ---------- | ------ | -------------------------------------------- |
-| x          | number | **REQUIRED**. Describe the required field... |
-| y          | number | **REQUIRED**. Describe the required field... |
-| z          | number | **REQUIRED**. Describe the required field... |
-
-## Relation types
-
-The following types should be used as applicable `rel` types in the
-[Link Object](https://github.com/radiantearth/stac-spec/tree/master/item-spec/item-spec.md#link-object).
-
-| Type           | Description                           |
-| -------------- | ------------------------------------- |
-| fancy-rel-type | This link points to a fancy resource. |
 
 ## Contributing
 
