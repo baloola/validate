@@ -1,0 +1,47 @@
+{
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://raw.githubusercontent.com/baloola/validate/refs/heads/main/json-schema/schema.json"
+    ],
+    "type": "Collection",
+    "id": "collection",
+    "title": "A title",
+    "description": "A description",
+    "license": "Apache-2.0",
+    "validate:quality_measures": "standardised calibration",
+    "validate:workflow": {
+      "href": "https://example-validation-workflow.com",
+      "title": "A link to the documentation of the validation workflow.",
+      "rel": "related"
+    },
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    172.9,
+                    1.3,
+                    173,
+                    1.4
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2015-06-23T00:00:00Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "links": [
+        {
+            "href": "https://example.com/examples/collection.json",
+            "rel": "self"
+        },
+        {
+            "href": "https://example.com/examples/item.json",
+            "rel": "item"
+        }
+    ]
+}
